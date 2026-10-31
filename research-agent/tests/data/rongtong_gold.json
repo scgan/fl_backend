@@ -1,0 +1,974 @@
+[
+  {
+    "id": "RT-001",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "ZH",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-002",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "ZH",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-003",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "ZH",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-004",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "EN",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-005",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "EN",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-006",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "EN",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-007",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "BILINGUAL",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-008",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "BILINGUAL",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-009",
+    "query": "面向国际研究者解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_RESEARCHER",
+    "audience_phrase": "国际研究者",
+    "language": "BILINGUAL",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-010",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "ZH",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-011",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "ZH",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-012",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "ZH",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-013",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "EN",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-014",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "EN",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-015",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "EN",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-016",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "BILINGUAL",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-017",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "BILINGUAL",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-018",
+    "query": "面向国外教师解释双减政策，澄清是否取消所有作业。",
+    "audience": "FOREIGN_TEACHER",
+    "audience_phrase": "国外教师",
+    "language": "BILINGUAL",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-019",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "ZH",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-020",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "ZH",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-021",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "ZH",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-022",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "EN",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-023",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "EN",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-024",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "EN",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-025",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "BILINGUAL",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-026",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "BILINGUAL",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-027",
+    "query": "面向普通公众解释双减政策，澄清是否取消所有作业。",
+    "audience": "GENERAL_PUBLIC",
+    "audience_phrase": "普通公众",
+    "language": "BILINGUAL",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-028",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "ZH",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-029",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "ZH",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-030",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "ZH",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-031",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "EN",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-032",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "EN",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-033",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "EN",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-034",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "BILINGUAL",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-035",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "BILINGUAL",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-036",
+    "query": "面向国际学生解释双减政策，澄清是否取消所有作业。",
+    "audience": "INTERNATIONAL_STUDENT",
+    "audience_phrase": "国际学生",
+    "language": "BILINGUAL",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-037",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "ZH",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-038",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "ZH",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-039",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "ZH",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-040",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "EN",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-041",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "EN",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-042",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "EN",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-043",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "BILINGUAL",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-044",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "BILINGUAL",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-045",
+    "query": "面向政策制定者解释双减政策，澄清是否取消所有作业。",
+    "audience": "POLICY_MAKER",
+    "audience_phrase": "政策制定者",
+    "language": "BILINGUAL",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-046",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "ZH",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-047",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "ZH",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-048",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "ZH",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-049",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "EN",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-050",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "EN",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-051",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "EN",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-052",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "BILINGUAL",
+    "style": "ACADEMIC",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-053",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "BILINGUAL",
+    "style": "POPULAR",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  },
+  {
+    "id": "RT-054",
+    "query": "面向媒体读者解释双减政策，澄清是否取消所有作业。",
+    "audience": "MEDIA",
+    "audience_phrase": "媒体读者",
+    "language": "BILINGUAL",
+    "style": "BRIEFING",
+    "source": "双减政策旨在减轻学生作业和校外培训负担。",
+    "expected_fact": "政策目标是减轻负担，不能表述为已经达成或取消所有作业",
+    "preferred_translation": "Double Reduction",
+    "forbidden_translation": "Dual Reduction",
+    "categories": [
+      "audience",
+      "terminology",
+      "evidence",
+      "bilingual"
+    ]
+  }
+]

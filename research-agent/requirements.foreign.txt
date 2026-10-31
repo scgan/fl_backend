@@ -1,0 +1,18 @@
+# Foreign 共库 Agent 使用图、模型网关、MySQL 及共享 Qdrant/OpenSearch 只读客户端。
+# 服务器未暴露 X86_V2；固定兼容 Python 3.12 的旧基线 wheel。
+numpy==1.26.4
+fastapi>=0.115,<1
+httpx>=0.28,<1
+openai>=1.60,<2
+requests>=2.31,<3
+langchain>=0.3,<2
+langgraph>=0.4,<2
+PyJWT>=2.10,<3
+PyMySQL>=1.1,<2
+pydantic-settings>=2.7,<3
+qdrant-client>=1.19,<2
+opensearch-py>=2.3,<3
+sqlalchemy>=2.0,<3
+uvicorn[standard]>=0.34,<1
+dashscope==1.20.1
+python-docx>=1.1,<2

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>辅助创作 · 雕龙（知网风格演示）</title>
+<style>
+  :root {
+    --green: #15803d;
+    --green-dark: #0f5c2e;
+    --green-light: #e7f5ec;
+    --border: #e2e5e9;
+    --text: #24292f;
+    --muted: #6b7280;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; color: var(--text); background: #f3f4f6; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  header { background: var(--green); color: #fff; padding: 10px 18px; display: flex; align-items: center; gap: 12px; flex: none; }
+  header .logo { width: 34px; height: 34px; border-radius: 6px; background: #fff; color: var(--green); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+  header h1 { font-size: 16px; font-weight: 500; }
+  header .tag { font-size: 12px; background: rgba(255,255,255,.18); padding: 2px 8px; border-radius: 10px; }
+  .conn { display: flex; gap: 8px; padding: 8px 18px; background: #fff; border-bottom: 1px solid var(--border); flex: none; flex-wrap: wrap; align-items: center; }
+  .conn label { font-size: 12px; color: var(--muted); }
+  .conn input, .conn select { font-size: 12px; padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; outline: none; }
+  .conn input { width: 230px; }
+  .conn input:focus { border-color: var(--green); }
+  .conn .hint { font-size: 11px; color: var(--muted); margin-left: auto; }
+  main { flex: 1; display: flex; min-height: 0; }
+  /* 左侧编辑器 */
+  .editor-pane { flex: 1.35; display: flex; flex-direction: column; background: #fff; border-right: 1px solid var(--border); min-width: 0; }
+  .editor-toolbar { display: flex; gap: 14px; padding: 8px 18px; border-bottom: 1px solid var(--border); color: #555; font-size: 14px; flex: none; align-items: center; }
+  .editor-toolbar .save-tip { margin-left: auto; font-size: 12px; color: var(--muted); }
+  #editor { flex: 1; overflow: auto; padding: 32px 46px; font-size: 16px; line-height: 1.9; outline: none; }
+  #editor .sample { color: var(--muted); }
+  .sel-toolbar { position: absolute; display: none; background: var(--green); border-radius: 8px; padding: 6px 8px; gap: 2px; box-shadow: 0 4px 14px rgba(0,0,0,.22); z-index: 50; flex-wrap: wrap; max-width: 520px; }
+  .sel-toolbar button { background: transparent; border: none; color: #fff; font-size: 13px; padding: 6px 9px; cursor: pointer; border-radius: 6px; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .sel-toolbar button:hover { background: rgba(255,255,255,.18); }
+  .sel-toolbar .sep { width: 1px; background: rgba(255,255,255,.35); margin: 4px 4px; }
+  .sel-toolbar button .ico { font-size: 14px; font-style: normal; }
+  /* 右侧助手 */
+  .chat-pane { flex: 1; display: flex; flex-direction: column; min-width: 360px; background: #fafbfc; }
+  .quick-tags { display: flex; gap: 8px; padding: 12px 14px 4px; flex-wrap: wrap; flex: none; }
+  .quick-tags button { border: 1px solid var(--green); color: var(--green); background: #fff; font-size: 12px; padding: 4px 12px; border-radius: 14px; cursor: pointer; }
+  .quick-tags button:hover { background: var(--green-light); }
+  #chat { flex: 1; overflow: auto; padding: 12px 14px; display: flex; flex-direction: column; gap: 12px; }
+  .msg { max-width: 92%; font-size: 13px; line-height: 1.7; white-space: pre-wrap; word-break: break-word; }
+  .msg.user { align-self: flex-end; background: var(--green); color: #fff; padding: 8px 12px; border-radius: 10px 10px 2px 10px; }
+  .msg.ai { align-self: flex-start; background: #fff; border: 1px solid var(--border); padding: 10px 12px; border-radius: 10px 10px 10px 2px; }
+  .msg.ai h4 { font-size: 13px; margin: 6px 0 4px; color: var(--green-dark); }
+  .msg.ai h5 { font-size: 12px; margin: 4px 0 2px; color: var(--muted); }
+  .msg.ai .cite { color: var(--green); font-size: 11px; }
+  .msg .ops { margin-top: 8px; display: flex; gap: 8px; }
+  .msg .ops button { font-size: 12px; border: 1px solid var(--green); background: #fff; color: var(--green); border-radius: 6px; padding: 3px 10px; cursor: pointer; }
+  .msg .ops button:hover { background: var(--green-light); }
+  .msg .meta { font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .input-bar { flex: none; border-top: 1px solid var(--border); padding: 10px 14px 14px; }
+  .input-bar .modes { display: flex; gap: 8px; margin-bottom: 8px; font-size: 12px; color: var(--muted); align-items: center; }
+  .input-row { display: flex; gap: 8px; }
+  .input-row textarea { flex: 1; height: 52px; resize: none; border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 13px; font-family: inherit; outline: none; }
+  .input-row textarea:focus { border-color: var(--green); }
+  .input-row button { width: 52px; border: none; border-radius: 8px; background: var(--green); color: #fff; cursor: pointer; font-size: 15px; }
+  .input-row button:disabled { background: #9ca3af; cursor: not-allowed; }
+  #toast { position: fixed; left: 50%; top: 76px; transform: translateX(-50%); background: rgba(36,41,47,.92); color: #fff; font-size: 13px; padding: 8px 18px; border-radius: 8px; display: none; z-index: 99; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">雕龙</div>
+  <h1>辅助创作</h1>
+  <span class="tag">知网风格演示 · 雕龙 DIAOLONG</span>
+  <span class="tag" id="conn-state">未连接</span>
+</header>
+
+<div class="conn">
+  <label>API</label><input id="api-base" value="http://localhost:18000">
+  <label>Bearer Token</label><input id="token" type="password" placeholder="Foreign 登录凭证">
+  <label>知识库 ID</label><input id="kb-id" type="number" min="1" style="width:110px">
+  <select id="mode"><option value="FAST">FAST</option><option value="DEEP">DEEP</option></select>
+  <span class="hint">服务端需设置 FOREIGN_AGENT_CORS_ORIGINS 允许本页来源跨域</span>
+</div>
+
+<main>
+  <section class="editor-pane">
+    <div class="editor-toolbar">
+      <span>微软雅黑 ▾</span><span>16px ▾</span><span>B</span><span><i>I</i></span><span>U</span>
+      <span class="save-tip" id="save-tip">选中文字试试划词工具条</span>
+    </div>
+    <div id="editor" contenteditable="true">
+      <p>我有10万篇文献，想基于向量做语义检索，是否应该对文献实施向量化？这个问题涉及存储成本与检索质量的权衡。</p>
+      <p>在学术研究中，文献综述的撰写往往需要对既有研究进行系统梳理，而研究问题的提出则决定了后续研究设计的方向。</p>
+    </div>
+  </section>
+
+  <aside class="chat-pane">
+    <div class="quick-tags">
+      <button data-tag="写作询问">写作询问</button>
+      <button data-tag="选题推荐">选题推荐</button>
+      <button data-tag="研究设计">研究设计</button>
+      <button data-tag="文献评价">文献评价</button>
+      <button data-tag="文章大纲">文章大纲</button>
+    </div>
+    <div id="chat"></div>
+    <div class="input-bar">
+      <div class="modes">
+        <label><input type="checkbox" id="deep-think"> 深度思考</label>
+        <span>· 划词后点击工具条按钮调用雕龙</span>
+      </div>
+      <div class="input-row">
+        <textarea id="chat-input" placeholder="您可以向雕龙提问（演示版：请先在左侧选中文本使用工具条）"></textarea>
+        <button id="send" title="发送">➤</button>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<div class="sel-toolbar" id="sel-toolbar">
+  <button data-action="CONTINUE"><span class="ico">✎</span>续写</button>
+  <button data-action="EXPAND"><span class="ico">⇲</span>扩写</button>
+  <button data-action="SHORTEN"><span class="ico">⇱</span>缩写</button>
+  <button data-action="REWRITE"><span class="ico">↻</span>改写</button>
+  <button data-action="POLISH"><span class="ico">✓</span>润色</button>
+  <span class="sep"></span>
+  <button data-action="ZH2EN"><span class="ico">中⇄英</span>中译英</button>
+  <button data-action="EN2ZH"><span class="ico">EN⇄中</span>英译中</button>
+  <span class="sep"></span>
+  <button data-theory="EXPLAIN"><span class="ico">?</span>概念解释</button>
+  <button data-theory="RECOMMEND"><span class="ico">❖</span>文献推荐</button>
+  <span class="sep"></span>
+  <button data-action="COPY"><span class="ico">⧉</span>复制</button>
+</div>
+
+<div id="toast"></div>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const editor = $("editor"), selToolbar = $("sel-toolbar"), chat = $("chat");
+let savedRange = null;
+let conversationId = null;
+let pendingReplacement = null;
+
+function toast(text, ms = 2600) {
+  const el = $("toast");
+  el.textContent = text;
+  el.style.display = "block";
+  clearTimeout(el._timer);
+  el._timer = setTimeout(() => (el.style.display = "none"), ms);
+}
+
+function setConn(ok, text) {
+  const el = $("conn-state");
+  el.textContent = text;
+  el.style.background = ok ? "rgba(255,255,255,.3)" : "rgba(0,0,0,.25)";
+}
+
+function addMsg(kind, html, ops) {
+  const div = document.createElement("div");
+  div.className = "msg " + kind;
+  if (kind === "user") { div.textContent = html; }
+  else { div.innerHTML = html; }
+  if (ops) div.appendChild(ops);
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+  return div;
+}
+
+function opsRow(buttons) {
+  const row = document.createElement("div");
+  row.className = "ops";
+  for (const b of buttons) {
+    const btn = document.createElement("button");
+    btn.textContent = b.label;
+    btn.onclick = b.onClick;
+    row.appendChild(btn);
+  }
+  return row;
+}
+
+function mdLite(text) {
+  const esc = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return esc.split(/\n\n+/).map((para) => {
+    const lines = para.split("\n").map((line) => {
+      if (line.startsWith("### ")) return "<h5>" + line.slice(4) + "</h5>";
+      if (line.startsWith("## ")) return "<h4>" + line.slice(3) + "</h4>";
+      if (line.startsWith("# ")) return "<h4>" + line.slice(2) + "</h4>";
+      if (line.startsWith("> ")) return "<div style='color:#6b7280;font-size:11px'>" + line.slice(2) + "</div>";
+      if (line.startsWith("- ")) return "<div>• " + line.slice(2) + "</div>";
+      return line;
+    });
+    return lines.join("");
+  }).join("").replace(/\[(\d+)\]/g, "<span class='cite'>[$1]</span>");
+}
+
+/* ---------- 划词工具条 ---------- */
+document.addEventListener("selectionchange", () => {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed || !editor.contains(sel.anchorNode)) {
+    return;
+  }
+  const rect = sel.getRangeAt(0).getBoundingClientRect();
+  selToolbar.style.display = "flex";
+  selToolbar.style.top = rect.top - 54 + window.scrollY + "px";
+  selToolbar.style.left = Math.max(8, rect.left + rect.width / 2 - 240) + "px";
+});
+
+document.addEventListener("mousedown", (e) => {
+  if (!selToolbar.contains(e.target)) {
+    // 延迟隐藏，让按钮 click 先拿到选区
+    setTimeout(() => { if (!window.getSelection().toString()) selToolbar.style.display = "none"; }, 120);
+  }
+});
+
+selToolbar.addEventListener("mousedown", (e) => {
+  // 防止点击工具条丢失编辑器选区
+  if (e.target.tagName !== "BUTTON") e.preventDefault();
+});
+
+function currentSelection() {
+  if (savedRange) return savedRange.toString();
+  const sel = window.getSelection();
+  return sel ? sel.toString() : "";
+}
+
+function captureRange() {
+  const sel = window.getSelection();
+  if (sel && !sel.isCollapsed && editor.contains(sel.anchorNode)) {
+    savedRange = sel.getRangeAt(0).cloneRange();
+  }
+}
+
+function editorContext(range) {
+  const full = editor.innerText || "";
+  const text = range.toString();
+  const idx = full.indexOf(text);
+  return {
+    before: idx > 0 ? full.slice(Math.max(0, idx - 300), idx).slice(-300) : "",
+    after: idx >= 0 ? full.slice(idx + text.length, idx + text.length + 300) : "",
+  };
+}
+
+function replaceSelection(newText) {
+  if (!savedRange) { toast("原选区已失效，结果已放入对话"); return; }
+  savedRange.deleteContents();
+  savedRange.insertNode(document.createTextNode(newText));
+  toast("已应用到编辑器");
+}
+
+/* ---------- 雕龙 API ---------- */
+function apiBase() { return $("api-base").value.trim().replace(/\/$/, ""); }
+function authHeaders() {
+  return { "Authorization": "Bearer " + $("token").value.trim(), "Content-Type": "application/json" };
+}
+function kbId() { return Number($("kb-id").value); }
+
+async function startRun(query, options) {
+  const resp = await fetch(apiBase() + "/api/v1/agents/DIAOLONG/runs", {
+    method: "POST",
+    headers: authHeaders(),
+    body: JSON.stringify({
+      request_id: crypto.randomUUID().replace(/-/g, ""),
+      knowledge_base_id: kbId(),
+      conversation_id: conversationId || null,
+      query: query.slice(0, 3900),
+      mode: $("mode").value,
+      options,
+    }),
+  });
+  if (resp.status === 401) throw new Error("登录凭证无效或缺失，请填写 Foreign Bearer Token");
+  if (resp.status === 403) throw new Error("账号无权使用智能研究（仅数据收集者角色可用）");
+  const body = await resp.json();
+  if (!resp.ok) throw new Error(body.message || ("HTTP " + resp.status));
+  conversationId = body.data.conversation_id;
+  setConn(true, "已连接");
+  return body.data.run_id;
+}
+
+async function pollRun(runId, onDone) {
+  for (let i = 0; i < 150; i++) {
+    await new Promise((r) => setTimeout(r, 2000));
+    let resp;
+    try {
+      resp = await fetch(apiBase() + "/api/v1/agent-runs/" + runId, { headers: authHeaders() });
+    } catch (e) { continue; }
+    if (!resp.ok) continue;
+    const body = await resp.json();
+    const run = body.data || {};
+    if (run.status === "SUCCESS") { onDone(run); return; }
+    if (run.status === "FAILED" || run.status === "CANCELLED") {
+      onDone(null, run.error_message || "运行失败，请查看 Agent 日志");
+      return;
+    }
+  }
+  onDone(null, "轮询超时，请稍后在历史中查看结果");
+}
+
+async function runDiaolong(label, query, options, onResult) {
+  captureRange();
+  const selected = query;
+  if (!selected || !selected.trim()) { toast("请先选中一段文字"); return; }
+  if (!kbId()) { toast("请先在顶部填写知识库 ID"); return; }
+  addMsg("user", label + "：" + selected.slice(0, 120) + (selected.length > 120 ? "…" : ""));
+  const thinking = addMsg("ai", "<span style='color:#6b7280'>雕龙正在处理，请稍候…</span>");
+  $("send").disabled = true;
+  try {
+    const runId = await startRun(selected, options);
+    pollRun(runId, (run, err) => {
+      thinking.remove();
+      $("send").disabled = false;
+      if (err) { addMsg("ai", "❌ " + err); setConn(true, "已连接"); return; }
+      onResult(run);
+    });
+  } catch (e) {
+    thinking.remove();
+    $("send").disabled = false;
+    addMsg("ai", "❌ " + e.message);
+    if (/Token|凭证/.test(e.message)) setConn(false, "未连接");
+  }
+}
+
+/* ---------- 工具条动作 ---------- */
+const ACTION_LABELS = {
+  CONTINUE: "续写", EXPAND: "扩写", SHORTEN: "缩写", REWRITE: "改写",
+  POLISH: "润色", ZH2EN: "中译英", EN2ZH: "英译中",
+};
+
+selToolbar.addEventListener("click", (e) => {
+  const btn = e.target.closest("button");
+  if (!btn) return;
+  const selected = currentSelection();
+  if (btn.dataset.action === "COPY") {
+    navigator.clipboard.writeText(selected).then(() => toast("已复制"));
+    return;
+  }
+  if (btn.dataset.action) {
+    const action = btn.dataset.action;
+    const range = savedRange || (window.getSelection().rangeCount ? window.getSelection().getRangeAt(0) : null);
+    const ctx = range ? editorContext(range) : { before: "", after: "" };
+    runDiaolong(ACTION_LABELS[action], selected,
+      { stage: "POLISH", action, context_before: ctx.before, context_after: ctx.after },
+      (run) => {
+        const result = (run.result_payload && run.result_payload.payload) || {};
+        const output = result.output_text || run.final_answer || "";
+        const ops = opsRow([
+          { label: "替换选区", onClick: () => replaceSelection(output) },
+          { label: "复制", onClick: () => { navigator.clipboard.writeText(output); toast("已复制"); } },
+        ]);
+        addMsg("ai", mdLite(output) + "<div class='meta'>雕龙 · " + ACTION_LABELS[action] + " · AI 辅助生成，请遵守学术规范</div>", ops);
+        pendingReplacement = output;
+      });
+    selToolbar.style.display = "none";
+    return;
+  }
+  if (btn.dataset.theory) {
+    const kind = btn.dataset.theory;
+    if (kind === "EXPLAIN") {
+      runDiaolong("概念解释", selected, { stage: "THEORY" }, renderTheoryResult);
+    } else {
+      runDiaolong("文献推荐", "推荐与「" + selected + "」相关的理论依据与文献", { stage: "THEORY" }, renderTheoryResult);
+    }
+    selToolbar.style.display = "none";
+  }
+});
+
+function renderTheoryResult(run) {
+  const answer = run.final_answer || "";
+  const level = run.evidence_level || "";
+  addMsg("ai", mdLite(answer) + "<div class='meta'>雕龙 · 理论依据与文献推荐 · 证据等级 " + level + "</div>");
+}
+
+/* ---------- 快捷标签与输入框 ---------- */
+document.querySelector(".quick-tags").addEventListener("click", (e) => {
+  const tag = e.target.closest("button");
+  if (!tag) return;
+  const mapping = {
+    "选题推荐": "RQ 阶段（研究问题生成）",
+    "文章大纲": "PLAN 阶段（写作方案）",
+    "写作询问": "DRAFT 阶段（论文起草）",
+    "研究设计": "REVISE 阶段（修改完善）",
+    "文献评价": "THEORY 阶段扩展",
+  };
+  toast("「" + tag.textContent + "」对应雕龙 " + (mapping[tag.textContent] || "") + "，将在 Phase 2 接入");
+  addMsg("user", tag.textContent);
+  addMsg("ai", "「" + tag.textContent + "」属于雕龙后续阶段，当前演示版支持：\n· 划词工具条的 7 种润改操作（续写/扩写/缩写/改写/润色/中英互译）\n· 概念解释与文献推荐（基于知识库真实证据）");
+});
+
+$("send").addEventListener("click", () => {
+  const text = $("chat-input").value.trim();
+  if (!text) return;
+  $("chat-input").value = "";
+  addMsg("user", text);
+  addMsg("ai", "演示版请先在左侧编辑器选中文字，然后使用绿色工具条调用雕龙。自由问答将在后续阶段接入。");
+});
+</script>
+</body>
+</html>

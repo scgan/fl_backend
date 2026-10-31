@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eduresearch-backend"
+version = "0.1.0"
+description = "EduResearch Agent FastAPI backend"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy==1.26.4",
+  "fastapi>=0.115,<1",
+  "httpx>=0.28,<1",
+  "requests>=2.31,<3",
+  "langchain>=0.3,<2",
+  "langgraph>=0.4,<2",
+  "PyJWT>=2.10,<3",
+  "PyMySQL>=1.1,<2",
+  "pydantic-settings>=2.7,<3",
+  "qdrant-client>=1.19,<2",
+  "opensearch-py>=2.3,<3",
+  "sqlalchemy>=2.0,<3",
+  "uvicorn[standard]>=0.34,<1",
+  "dashscope==1.20.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+  "ruff>=0.9,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008"]

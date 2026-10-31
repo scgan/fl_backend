@@ -1,0 +1,19 @@
+# 构建 Python 3.9 开发后端与 Worker 共用镜像，通过 start-dev.sh 选择启动流程。
+FROM python:3.9
+
+WORKDIR /app
+
+COPY requirements.txt /app
+
+RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
+RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+
+COPY . /app
+
+ENV FLASK_APP=app/app.py
+ENV FLASK_ENV=production
+ENV INDEX_FILE_BASE_DIR=/foreign-files
+
+EXPOSE 5000
+
+CMD ["/bin/sh", "start-dev.sh"]

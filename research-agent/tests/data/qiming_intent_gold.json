@@ -1,0 +1,98 @@
+[
+  {
+    "id": "QI-001",
+    "query": "分别说明中美两国人工智能教育政策各自强调什么。",
+    "intent": "COMPARE",
+    "category": "parallel_comparison"
+  },
+  {
+    "id": "QI-002",
+    "query": "比较项目式学习和探究式学习在课堂评价上的异同。",
+    "intent": "COMPARE",
+    "category": "non_country_comparison"
+  },
+  {
+    "id": "QI-003",
+    "query": "什么是形成性评价？",
+    "intent": "SIMPLE_QA",
+    "category": "concept_definition"
+  },
+  {
+    "id": "QI-004",
+    "query": "形成性评价最早如何提出，后来经历了哪些变化？",
+    "intent": "CONCEPT_TRACE",
+    "category": "concept_history"
+  },
+  {
+    "id": "QI-005",
+    "query": "综述近五年形成性评价研究的方法、争议与空白。",
+    "intent": "LITERATURE_REVIEW",
+    "category": "literature_synthesis"
+  },
+  {
+    "id": "QI-006",
+    "query": "这篇论文的主要研究方法是什么？",
+    "intent": "SIMPLE_QA",
+    "category": "single_paper"
+  },
+  {
+    "id": "QI-007",
+    "query": "双减政策的目标和实施工具是什么？",
+    "intent": "SIMPLE_QA",
+    "category": "policy_explanation"
+  },
+  {
+    "id": "QI-008",
+    "query": "双减政策是哪一年发布的？",
+    "intent": "SIMPLE_QA",
+    "category": "policy_fact"
+  },
+  {
+    "id": "QI-009",
+    "query": "用英文回答双减政策的目标是什么。",
+    "intent": "SIMPLE_QA",
+    "category": "language_only"
+  },
+  {
+    "id": "QI-010",
+    "query": "写一份给英国教师看的中国双减政策介绍，解释他们可能误解的术语。",
+    "intent": "SIMPLE_QA",
+    "category": "audience_adaptation"
+  },
+  {
+    "id": "QI-011",
+    "query": "比较中美人工智能教育政策，并综述近五年相关研究。",
+    "intent": "UNSUPPORTED",
+    "category": "multiple_specialist_deliverables"
+  },
+  {
+    "id": "QI-012",
+    "query": "先说明双减政策背景，再解释其目标和实施机制。",
+    "intent": "SIMPLE_QA",
+    "category": "single_deliverable_steps"
+  },
+  {
+    "id": "QI-013",
+    "query": "比较中日教师培训政策，并用英文回答。",
+    "intent": "COMPARE",
+    "category": "output_language_not_task"
+  },
+  {
+    "id": "QI-014",
+    "query": "给我推荐一道晚餐菜谱。",
+    "intent": "UNSUPPORTED",
+    "category": "out_of_domain"
+  },
+  {
+    "id": "QI-015",
+    "query": "解释双减政策，再单独写一篇面向英国教师的传播稿。",
+    "intent": "UNSUPPORTED",
+    "category": "multiple_specialist_deliverables"
+  },
+  {
+    "id": "policy-development-trace",
+    "query": "双减政策的发展",
+    "intent": "CONCEPT_TRACE",
+    "category": "policy_evolution"
+  }
+]

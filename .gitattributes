@@ -1,0 +1,5 @@
+/start-dev.sh text eol=lf
+/deploy-dev.sh text eol=lf
+/start.sh text eol=lf
+/deploy.sh text eol=lf
+*.tar.gz filter=lfs diff=lfs merge=lfs -text
